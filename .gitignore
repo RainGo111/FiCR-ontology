@@ -1,0 +1,5 @@
+widoco.jar
+tmp*/
+*.log
+*.tmp
+*.png
