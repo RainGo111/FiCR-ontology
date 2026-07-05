@@ -620,11 +620,11 @@
   "@id" : "https://w3id.org/ficr",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Yu Zhang"
+  }, {
     "@value" : "Dayou Chen"
   }, {
     "@value" : "Long Chen"
-  }, {
-    "@value" : "Yu Zhang"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",

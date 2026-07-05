@@ -16,9 +16,9 @@
     <owl:Ontology rdf:about="https://w3id.org/ficr">
         <owl:versionIRI rdf:resource="https://w3id.org/ficr/1.1.0"/>
         <owl:imports rdf:resource="https://w3id.org/bot"/>
+        <terms:creator>Yu Zhang</terms:creator>
         <terms:creator>Dayou Chen</terms:creator>
         <terms:creator>Long Chen</terms:creator>
-        <terms:creator>Yu Zhang</terms:creator>
         <terms:description xml:lang="en">FiCR, Fire Compliance and Risk Analysis, is a domain specific semantic model designed to represent fire safety and fire risk relevant physical objects, building elements, equipment, functional roles, and their relationships in existing buildings. It supports a structured and interoperable representation of both passive and active fire protection measures, as well as risk related attributes and performance outcomes, enabling compliance assessment, fire risk analysis, and inspection activities throughout the building operation and maintenance phase. FiCR further provides a semantic foundation for rule based reasoning and fire oriented digital twins that integrate regulatory compliance and risk informed decision making.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-26</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
