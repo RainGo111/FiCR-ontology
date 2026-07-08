@@ -6,7 +6,7 @@ FiCR (Fire Compliance and Risk Analysis) is a domain-specific ontology for repre
 - Ontology IRI: `https://w3id.org/ficr`
 - Current version: `1.1.0`
 - Version IRI: `https://w3id.org/ficr/1.1.0`
-- Authors: Yu Zhang, Dayou Chen, Long Chen
+- Authors: Yu Zhang, Dayou Chen, Long Chen, Qiuchen Lu, Simon Sølvsten, Craig Hancock
 - License: CC BY 4.0
 - Documentation: <https://raingo111.github.io/FiCR-ontology/>
 

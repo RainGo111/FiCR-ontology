@@ -7,8 +7,14 @@
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo :agent4;
+	 prov:wasAttributedTo :agent5;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 .
-:agent0 a prov:Agent; foaf:name "Dayou Chen".
-:agent1 a prov:Agent; foaf:name "Long Chen".
-:agent2 a prov:Agent; foaf:name "Yu Zhang".
+:agent0 a prov:Agent; foaf:name "Yu Zhang".
+:agent1 a prov:Agent; foaf:name "Dayou Chen".
+:agent2 a prov:Agent; foaf:name "Long Chen".
+:agent3 a prov:Agent; foaf:name "Qiuchen Lu".
+:agent4 a prov:Agent; foaf:name "Simon Sølvsten".
+:agent5 a prov:Agent; foaf:name "Craig Hancock".

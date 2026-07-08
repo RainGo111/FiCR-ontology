@@ -625,6 +625,12 @@
     "@value" : "Dayou Chen"
   }, {
     "@value" : "Long Chen"
+  }, {
+    "@value" : "Qiuchen Lu"
+  }, {
+    "@value" : "Simon Sølvsten"
+  }, {
+    "@value" : "Craig Hancock"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
