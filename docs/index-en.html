@@ -17,11 +17,11 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ficr#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ficr#","name":"FiCR: Fire Compliance and Risk Analysis Ontology", "headline":"Document describing the ontology https://w3id.org/ficr#", "dateReleased":"Wed Jul 08 14:31:28 BST 2026", "dateModified":"2025-07-01", "version":"1.1.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Yu Zhang"},{"@type":"Person","name":"Dayou Chen"},{"@type":"Person","name":"Long Chen"},{"@type":"Person","name":"Qiuchen Lu"},{"@type":"Person","name":"Simon Sølvsten"},{"@type":"Person","name":"Craig Hancock"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ficr#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ficr#","name":"FiCR: Fire Compliance and Risk Analysis Ontology", "headline":"Document describing the ontology https://w3id.org/ficr#", "dateReleased":"Fri Jul 10 11:23:56 BST 2026", "dateModified":"2025-07-10", "version":"1.1.1", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Yu Zhang"},{"@type":"Person","name":"Dayou Chen"},{"@type":"Person","name":"Long Chen"},{"@type":"Person","name":"Qiuchen Lu"},{"@type":"Person","name":"Simon Sølvsten"},{"@type":"Person","name":"Craig Hancock"}]}</script>
 
-<script src="resources/jquery.js"></script> 
-<script src="resources/marked.min.js"></script> 
-    <script> 
+<script src="resources/jquery.js"></script>
+<script src="resources/marked.min.js"></script>
+    <script>
 function loadHash() {
   jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
 	var hash = location.hash;
@@ -51,15 +51,15 @@ function loadTOC(){
 		}
 	  });
 	  t+='</ul>';
-	  $("#toc").html(t); 
+	  $("#toc").html(t);
 }
 $(function(){
     loadHash();
 }); $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
- }; 
-   </script> 
-  </head> 
+ };
+   </script>
+  </head>
 
 <body>
 <div class="container">
@@ -69,11 +69,13 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2025-07-01</dt>
+<dt>Modified on: 2025-07-10</dt>
 <dt>This version:</dt>
+<dd><a href="https://w3id.org/ficr/1.1.1">https://w3id.org/ficr/1.1.1</a></dd>
+<dt>Previous version:</dt>
 <dd><a href="https://w3id.org/ficr/1.1.0">https://w3id.org/ficr/1.1.0</a></dd>
 <dt>Revision:</dt>
-<dd>1.1.0</dd>
+<dd>1.1.1</dd>
 <dt>Issued on:</dt>
 <dd>2025-06-26</dd>
 <dt>Authors:</dt>
@@ -94,7 +96,7 @@ $(function(){
 <div>
 <span>Ontology Specification Draft</span>
 </div>
-</div><div id="toc"></div>  
+</div><div id="toc"></div>
 
 <!--OVERVIEW SECTION-->
     <div id="overview"><h2 id="overv" class="list">FiCR: Fire Compliance and Risk Analysis Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -1099,9 +1101,6 @@ This ontology has the following classes and properties.</span>
       <a href="#hasEvidenceStatus" title="https://w3id.org/ficr#hasEvidenceStatus">hasEvidenceStatus</a>
    </li>
    <li>
-      <a href="#hasFireRiskUnitRole" title="https://w3id.org/ficr#hasFireRiskUnitRole">hasFireRiskUnitRole</a>
-   </li>
-   <li>
       <a href="#hasFireSafetyRole" title="https://w3id.org/ficr#hasFireSafetyRole">hasFireSafetyRole</a>
    </li>
    <li>
@@ -1127,9 +1126,6 @@ This ontology has the following classes and properties.</span>
       <a href="#hasScenarioRiskUnit" title="https://w3id.org/ficr#hasScenarioRiskUnit">hasScenarioRiskUnit</a>
    </li>
    <li>
-      <a href="#hasSeparationRecord" title="https://w3id.org/ficr#hasSeparationRecord">hasSeparationRecord</a>
-   </li>
-   <li>
       <a href="#hasSpaceUsage" title="https://w3id.org/ficr#hasSpaceUsage">hasSpaceUsage</a>
    </li>
    <li>
@@ -1152,9 +1148,6 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#isExposedTo" title="https://w3id.org/ficr#isExposedTo">isExposedTo</a>
-   </li>
-   <li>
-      <a href="#isFireRiskUnitRoleOf" title="https://w3id.org/ficr#isFireRiskUnitRoleOf">isFireRiskUnitRoleOf</a>
    </li>
    <li>
       <a href="#isFireSafetyRoleOf" title="https://w3id.org/ficr#isFireSafetyRoleOf">isFireSafetyRoleOf</a>
@@ -1233,9 +1226,6 @@ This ontology has the following classes and properties.</span>
       <a href="#hasActualREI" title="https://w3id.org/ficr#hasActualREI">hasActualREI</a>
    </li>
    <li>
-      <a href="#hasActualSeparationM" title="https://w3id.org/ficr#hasActualSeparationM">hasActualSeparationM</a>
-   </li>
-   <li>
       <a href="#hasArea" title="https://w3id.org/ficr#hasArea">hasArea</a>
    </li>
    <li>
@@ -1285,9 +1275,6 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#hasRequiredREI" title="https://w3id.org/ficr#hasRequiredREI">hasRequiredREI</a>
-   </li>
-   <li>
-      <a href="#hasRequiredSeparationM" title="https://w3id.org/ficr#hasRequiredSeparationM">hasRequiredSeparationM</a>
    </li>
    <li>
       <a href="#hasScenarioDescription" title="https://w3id.org/ficr#hasScenarioDescription">hasScenarioDescription</a>
@@ -1443,11 +1430,6 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#ADB" title="https://w3id.org/ficr#ADB">
-         <span>A D B</span>
-      </a>
-   </li>
-   <li>
       <a href="#AccessRoomRole" title="https://w3id.org/ficr#AccessRoomRole">
          <span>AccessRoomRole</span>
       </a>
@@ -1461,6 +1443,9 @@ This ontology has the following classes and properties.</span>
       <a href="#ActiveFireProtectionRole" title="https://w3id.org/ficr#ActiveFireProtectionRole">
          <span>ActiveFireProtectionRole</span>
       </a>
+   </li>
+   <li>
+      <a href="#ADB" title="https://w3id.org/ficr#ADB">ADB</a>
    </li>
    <li>
       <a href="#AlternativeEscapeRouteRole"
@@ -1489,19 +1474,12 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#BDM02" title="https://w3id.org/ficr#BDM02">
-         <span>B D M02</span>
-      </a>
-   </li>
-   <li>
-      <a href="#BS_EN_12845" title="https://w3id.org/ficr#BS_EN_12845">
-         <span>B S E N 12845</span>
-      </a>
-   </li>
-   <li>
       <a href="#Bathroom" title="https://w3id.org/ficr#Bathroom">
          <span>Bathroom</span>
       </a>
+   </li>
+   <li>
+      <a href="#BDM02" title="https://w3id.org/ficr#BDM02">BDM02</a>
    </li>
    <li>
       <a href="#BoardingHouse" title="https://w3id.org/ficr#BoardingHouse">
@@ -1512,6 +1490,9 @@ This ontology has the following classes and properties.</span>
       <a href="#BoilerRoom" title="https://w3id.org/ficr#BoilerRoom">
          <span>BoilerRoom</span>
       </a>
+   </li>
+   <li>
+      <a href="#BS_EN_12845" title="https://w3id.org/ficr#BS_EN_12845">BS_EN_12845</a>
    </li>
    <li>
       <a href="#CarParking" title="https://w3id.org/ficr#CarParking">
@@ -1857,9 +1838,7 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#Risk_Evaluation_Tool" title="https://w3id.org/ficr#Risk_Evaluation_Tool">
-         <span>Risk Evaluation Tool</span>
-      </a>
+      <a href="#Risk_Evaluation_Tool" title="https://w3id.org/ficr#Risk_Evaluation_Tool">Risk_Evaluation_Tool</a>
    </li>
    <li>
       <a href="#School" title="https://w3id.org/ficr#School">
@@ -1927,15 +1906,15 @@ This ontology has the following classes and properties.</span>
          <span>Warehouse</span>
       </a>
    </li>
-</ul><iframe src="webvowl/index.html"></iframe> 
+</ul><iframe src="webvowl/index.html"></iframe>
 </div>
-  
+
 
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">FiCR: Fire Compliance and Risk Analysis Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
 <span class="markdown">Property domain convention: properties shared by multiple record types (e.g. supportedByEvidence, hasEvidenceStatus, measurement properties such as hasActualREI) are deliberately declared without rdfs:domain to avoid unintended type inference. Properties with a single host class declare an explicit rdfs:domain. Intended subjects are documented in each property's rdfs:comment.</span></div>
-   
+
 
 <!--CROSSREF SECTION-->
    <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for FiCR: Fire Compliance and Risk Analysis Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -4689,7 +4668,7 @@ This section provides details for each class and property defined by FiCR: Fire 
     is in range of
    </dt>
    <dd>
-    <a href="#hasFireSafetyRole" title="https://w3id.org/ficr#hasFireSafetyRole">hasFireSafetyRole</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPhysicalObjectFireSafetyRole" title="https://w3id.org/ficr#hasPhysicalObjectFireSafetyRole">hasPhysicalObjectFireSafetyRole</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSystemFireSafetyRole" title="https://w3id.org/ficr#hasSystemFireSafetyRole">hasSystemFireSafetyRole</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasZoneFireSafetyRole" title="https://w3id.org/ficr#hasZoneFireSafetyRole">hasZoneFireSafetyRole</a> <sup class="type-op" title="object property">op</sup>, <a href="#isFireSafetyRoleOf" title="https://w3id.org/ficr#isFireSafetyRoleOf">isFireSafetyRoleOf</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasFireSafetyRole" title="https://w3id.org/ficr#hasFireSafetyRole">hasFireSafetyRole</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPhysicalObjectFireSafetyRole" title="https://w3id.org/ficr#hasPhysicalObjectFireSafetyRole">hasPhysicalObjectFireSafetyRole</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSystemFireSafetyRole" title="https://w3id.org/ficr#hasSystemFireSafetyRole">hasSystemFireSafetyRole</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasZoneFireSafetyRole" title="https://w3id.org/ficr#hasZoneFireSafetyRole">hasZoneFireSafetyRole</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -4983,7 +4962,7 @@ This section provides details for each class and property defined by FiCR: Fire 
     has members
    </dt>
    <dd>
-    <a href="#ADB" title="https://w3id.org/ficr#ADB">A D B</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#BDM02" title="https://w3id.org/ficr#BDM02">B D M02</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Risk_Evaluation_Tool" title="https://w3id.org/ficr#Risk_Evaluation_Tool">Risk Evaluation Tool</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#ADB" title="https://w3id.org/ficr#ADB">ADB</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#BDM02" title="https://w3id.org/ficr#BDM02">BDM02</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Risk_Evaluation_Tool" title="https://w3id.org/ficr#Risk_Evaluation_Tool">Risk_Evaluation_Tool</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -6717,7 +6696,7 @@ This section provides details for each class and property defined by FiCR: Fire 
     is in domain of
    </dt>
    <dd>
-    <a href="#coversSpatialZone" title="https://w3id.org/ficr#coversSpatialZone">coversSpatialZone</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSeparationRecord" title="https://w3id.org/ficr#hasSeparationRecord">hasSeparationRecord</a> <sup class="type-op" title="object property">op</sup>, <a href="#isExposedTo" title="https://w3id.org/ficr#isExposedTo">isExposedTo</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#coversSpatialZone" title="https://w3id.org/ficr#coversSpatialZone">coversSpatialZone</a> <sup class="type-op" title="object property">op</sup>, <a href="#isExposedTo" title="https://w3id.org/ficr#isExposedTo">isExposedTo</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -7251,7 +7230,7 @@ This section provides details for each class and property defined by FiCR: Fire 
     has members
    </dt>
    <dd>
-    <a href="#BS_EN_12845" title="https://w3id.org/ficr#BS_EN_12845">B S E N 12845</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#BS_EN_12845" title="https://w3id.org/ficr#BS_EN_12845">BS_EN_12845</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -7718,7 +7697,6 @@ This section provides details for each class and property defined by FiCR: Fire 
   <li><a href="#hasConditionState" title="https://w3id.org/ficr#hasConditionState">hasConditionState</a></li>
   <li><a href="#hasConnectionWith" title="https://w3id.org/ficr#hasConnectionWith">hasConnectionWith</a></li>
   <li><a href="#hasEvidenceStatus" title="https://w3id.org/ficr#hasEvidenceStatus">hasEvidenceStatus</a></li>
-  <li><a href="#hasFireRiskUnitRole" title="https://w3id.org/ficr#hasFireRiskUnitRole">hasFireRiskUnitRole</a></li>
   <li><a href="#hasFireSafetyRole" title="https://w3id.org/ficr#hasFireSafetyRole">hasFireSafetyRole</a></li>
   <li><a href="#hasImpairmentState" title="https://w3id.org/ficr#hasImpairmentState">hasImpairmentState</a></li>
   <li><a href="#hasInstallationStatus" title="https://w3id.org/ficr#hasInstallationStatus">hasInstallationStatus</a></li>
@@ -7727,7 +7705,6 @@ This section provides details for each class and property defined by FiCR: Fire 
   <li><a href="#hasPurposeGroup" title="https://w3id.org/ficr#hasPurposeGroup">hasPurposeGroup</a></li>
   <li><a href="#hasScenario" title="https://w3id.org/ficr#hasScenario">hasScenario</a></li>
   <li><a href="#hasScenarioRiskUnit" title="https://w3id.org/ficr#hasScenarioRiskUnit">hasScenarioRiskUnit</a></li>
-  <li><a href="#hasSeparationRecord" title="https://w3id.org/ficr#hasSeparationRecord">hasSeparationRecord</a></li>
   <li><a href="#hasSpaceUsage" title="https://w3id.org/ficr#hasSpaceUsage">hasSpaceUsage</a></li>
   <li><a href="#hasSystemFireSafetyRole" title="https://w3id.org/ficr#hasSystemFireSafetyRole">hasSystemFireSafetyRole</a></li>
   <li><a href="#hasUsageType" title="https://w3id.org/ficr#hasUsageType">hasUsageType</a></li>
@@ -7736,7 +7713,6 @@ This section provides details for each class and property defined by FiCR: Fire 
   <li><a href="#isClassificationOf" title="https://w3id.org/ficr#isClassificationOf">isClassificationOf</a></li>
   <li><a href="#isComponentOf" title="https://w3id.org/ficr#isComponentOf">isComponentOf</a></li>
   <li><a href="#isExposedTo" title="https://w3id.org/ficr#isExposedTo">isExposedTo</a></li>
-  <li><a href="#isFireRiskUnitRoleOf" title="https://w3id.org/ficr#isFireRiskUnitRoleOf">isFireRiskUnitRoleOf</a></li>
   <li><a href="#isFireSafetyRoleOf" title="https://w3id.org/ficr#isFireSafetyRoleOf">isFireSafetyRoleOf</a></li>
   <li><a href="#isLocatedIn" title="https://w3id.org/ficr#isLocatedIn">isLocatedIn</a></li>
   <li><a href="#isPhysicalObjectFireSafetyRoleOf" title="https://w3id.org/ficr#isPhysicalObjectFireSafetyRoleOf">isPhysicalObjectFireSafetyRoleOf</a></li>
@@ -8318,29 +8294,6 @@ This section provides details for each class and property defined by FiCR: Fire 
    </dl>
   </div>
  </div>
- <div class="entity" id="hasFireRiskUnitRole">
-  <h3>hasFireRiskUnitRole<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ficr#hasFireRiskUnitRole</p>
-  <div class="comment">
-   <span class="markdown">Assigns a fire risk unit role to an entity.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has super-properties
-    </dt>
-    <dd>
-     <a href="#hasUsageType" title="https://w3id.org/ficr#hasUsageType">hasUsageType</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-    <dt>
-     is inverse of
-    </dt>
-    <dd>
-     <a href="#isFireRiskUnitRoleOf" title="https://w3id.org/ficr#isFireRiskUnitRoleOf">isFireRiskUnitRoleOf</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="hasFireSafetyRole">
   <h3>hasFireSafetyRole<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ficr#hasFireSafetyRole</p>
@@ -8549,23 +8502,6 @@ This section provides details for each class and property defined by FiCR: Fire 
    </dl>
   </div>
  </div>
- <div class="entity" id="hasSeparationRecord">
-  <h3>hasSeparationRecord<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ficr#hasSeparationRecord</p>
-  <div class="comment">
-   <span class="markdown">Links a risk unit to a separation distance record describing its exposure to an adjacent risk unit.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#RiskUnit" title="https://w3id.org/ficr#RiskUnit">RiskUnit</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="hasSpaceUsage">
   <h3>hasSpaceUsage<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ficr#hasSpaceUsage</p>
@@ -8648,7 +8584,7 @@ This section provides details for each class and property defined by FiCR: Fire 
      has sub-properties
     </dt>
     <dd>
-     <a href="#hasFireRiskUnitRole" title="https://w3id.org/ficr#hasFireRiskUnitRole">hasFireRiskUnitRole</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFireSafetyRole" title="https://w3id.org/ficr#hasFireSafetyRole">hasFireSafetyRole</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSpaceUsage" title="https://w3id.org/ficr#hasSpaceUsage">hasSpaceUsage</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasUtilizationPurpose" title="https://w3id.org/ficr#hasUtilizationPurpose">hasUtilizationPurpose</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#hasFireSafetyRole" title="https://w3id.org/ficr#hasFireSafetyRole">hasFireSafetyRole</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSpaceUsage" title="https://w3id.org/ficr#hasSpaceUsage">hasSpaceUsage</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasUtilizationPurpose" title="https://w3id.org/ficr#hasUtilizationPurpose">hasUtilizationPurpose</a> <sup class="type-op" title="object property">op</sup>
     </dd>
     <dt>
      has range
@@ -8798,29 +8734,6 @@ This section provides details for each class and property defined by FiCR: Fire 
    </dl>
   </div>
  </div>
- <div class="entity" id="isFireRiskUnitRoleOf">
-  <h3>isFireRiskUnitRoleOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ficr#isFireRiskUnitRoleOf</p>
-  <div class="comment">
-   <span class="markdown">Inverse of hasFireRiskUnitRole.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has super-properties
-    </dt>
-    <dd>
-     <a href="#isUsageTypeOf" title="https://w3id.org/ficr#isUsageTypeOf">isUsageTypeOf</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-    <dt>
-     is inverse of
-    </dt>
-    <dd>
-     <a href="#hasFireRiskUnitRole" title="https://w3id.org/ficr#hasFireRiskUnitRole">hasFireRiskUnitRole</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="isFireSafetyRoleOf">
   <h3>isFireSafetyRoleOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ficr#isFireSafetyRoleOf</p>
@@ -8836,10 +8749,10 @@ This section provides details for each class and property defined by FiCR: Fire 
      <a href="#isUsageTypeOf" title="https://w3id.org/ficr#isUsageTypeOf">isUsageTypeOf</a> <sup class="type-op" title="object property">op</sup>
     </dd>
     <dt>
-     has range
+     has sub-properties
     </dt>
     <dd>
-     <a href="#FireSafetyRole" title="https://w3id.org/ficr#FireSafetyRole">FireSafetyRole</a> <sup class="type-c" title="class">c</sup>
+     <a href="#isPhysicalObjectFireSafetyRoleOf" title="https://w3id.org/ficr#isPhysicalObjectFireSafetyRoleOf">isPhysicalObjectFireSafetyRoleOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSystemFireSafetyRoleOf" title="https://w3id.org/ficr#isSystemFireSafetyRoleOf">isSystemFireSafetyRoleOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#isZoneFireSafetyRoleOf" title="https://w3id.org/ficr#isZoneFireSafetyRoleOf">isZoneFireSafetyRoleOf</a> <sup class="type-op" title="object property">op</sup>
     </dd>
     <dt>
      is inverse of
@@ -8885,7 +8798,7 @@ This section provides details for each class and property defined by FiCR: Fire 
      has super-properties
     </dt>
     <dd>
-     <a href="#isUsageTypeOf" title="https://w3id.org/ficr#isUsageTypeOf">isUsageTypeOf</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#isFireSafetyRoleOf" title="https://w3id.org/ficr#isFireSafetyRoleOf">isFireSafetyRoleOf</a> <sup class="type-op" title="object property">op</sup>
     </dd>
     <dt>
      is inverse of
@@ -9029,7 +8942,7 @@ This section provides details for each class and property defined by FiCR: Fire 
      has super-properties
     </dt>
     <dd>
-     <a href="#isUsageTypeOf" title="https://w3id.org/ficr#isUsageTypeOf">isUsageTypeOf</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#isFireSafetyRoleOf" title="https://w3id.org/ficr#isFireSafetyRoleOf">isFireSafetyRoleOf</a> <sup class="type-op" title="object property">op</sup>
     </dd>
     <dt>
      is inverse of
@@ -9052,7 +8965,7 @@ This section provides details for each class and property defined by FiCR: Fire 
      has sub-properties
     </dt>
     <dd>
-     <a href="#isFireRiskUnitRoleOf" title="https://w3id.org/ficr#isFireRiskUnitRoleOf">isFireRiskUnitRoleOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#isFireSafetyRoleOf" title="https://w3id.org/ficr#isFireSafetyRoleOf">isFireSafetyRoleOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#isPhysicalObjectFireSafetyRoleOf" title="https://w3id.org/ficr#isPhysicalObjectFireSafetyRoleOf">isPhysicalObjectFireSafetyRoleOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSpaceUsageOf" title="https://w3id.org/ficr#isSpaceUsageOf">isSpaceUsageOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSystemFireSafetyRoleOf" title="https://w3id.org/ficr#isSystemFireSafetyRoleOf">isSystemFireSafetyRoleOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#isUtilizationPurposeOf" title="https://w3id.org/ficr#isUtilizationPurposeOf">isUtilizationPurposeOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#isZoneFireSafetyRoleOf" title="https://w3id.org/ficr#isZoneFireSafetyRoleOf">isZoneFireSafetyRoleOf</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#isFireSafetyRoleOf" title="https://w3id.org/ficr#isFireSafetyRoleOf">isFireSafetyRoleOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSpaceUsageOf" title="https://w3id.org/ficr#isSpaceUsageOf">isSpaceUsageOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#isUtilizationPurposeOf" title="https://w3id.org/ficr#isUtilizationPurposeOf">isUtilizationPurposeOf</a> <sup class="type-op" title="object property">op</sup>
     </dd>
     <dt>
      is inverse of
@@ -9098,7 +9011,7 @@ This section provides details for each class and property defined by FiCR: Fire 
      has super-properties
     </dt>
     <dd>
-     <a href="#isUsageTypeOf" title="https://w3id.org/ficr#isUsageTypeOf">isUsageTypeOf</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#isFireSafetyRoleOf" title="https://w3id.org/ficr#isFireSafetyRoleOf">isFireSafetyRoleOf</a> <sup class="type-op" title="object property">op</sup>
     </dd>
     <dt>
      is inverse of
@@ -9328,7 +9241,6 @@ This section provides details for each class and property defined by FiCR: Fire 
   <li><a href="#documentTitle" title="https://w3id.org/ficr#documentTitle">documentTitle</a></li>
   <li><a href="#documentURI" title="https://w3id.org/ficr#documentURI">documentURI</a></li>
   <li><a href="#hasActualREI" title="https://w3id.org/ficr#hasActualREI">hasActualREI</a></li>
-  <li><a href="#hasActualSeparationM" title="https://w3id.org/ficr#hasActualSeparationM">hasActualSeparationM</a></li>
   <li><a href="#hasArea" title="https://w3id.org/ficr#hasArea">hasArea</a></li>
   <li><a href="#hasBuildingHeight" title="https://w3id.org/ficr#hasBuildingHeight">hasBuildingHeight</a></li>
   <li><a href="#hasClauseReference" title="https://w3id.org/ficr#hasClauseReference">hasClauseReference</a></li>
@@ -9346,7 +9258,6 @@ This section provides details for each class and property defined by FiCR: Fire 
   <li><a href="#hasLength" title="https://w3id.org/ficr#hasLength">hasLength</a></li>
   <li><a href="#hasNumberOfStoreys" title="https://w3id.org/ficr#hasNumberOfStoreys">hasNumberOfStoreys</a></li>
   <li><a href="#hasRequiredREI" title="https://w3id.org/ficr#hasRequiredREI">hasRequiredREI</a></li>
-  <li><a href="#hasRequiredSeparationM" title="https://w3id.org/ficr#hasRequiredSeparationM">hasRequiredSeparationM</a></li>
   <li><a href="#hasScenarioDescription" title="https://w3id.org/ficr#hasScenarioDescription">hasScenarioDescription</a></li>
   <li><a href="#hasServiceExpiryDate" title="https://w3id.org/ficr#hasServiceExpiryDate">hasServiceExpiryDate</a></li>
   <li><a href="#hasSourceEdition" title="https://w3id.org/ficr#hasSourceEdition">hasSourceEdition</a></li>
@@ -9433,23 +9344,6 @@ This section provides details for each class and property defined by FiCR: Fire 
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="hasActualSeparationM">
-  <h3>hasActualSeparationM<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ficr#hasActualSeparationM</p>
-  <div class="comment">
-   <span class="markdown">Measured physical separation distance in metres between two risk units.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
     </dd>
    </dl>
   </div>
@@ -9554,6 +9448,12 @@ This section provides details for each class and property defined by FiCR: Fire 
     <dd>
      <a href="#Alarm" title="https://w3id.org/ficr#Alarm">Alarm</a> <sup class="type-c" title="class">c</sup>
     </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
    </dl>
   </div>
  </div>
@@ -9570,6 +9470,12 @@ This section provides details for each class and property defined by FiCR: Fire 
     </dt>
     <dd>
      <a href="#Alarm" title="https://w3id.org/ficr#Alarm">Alarm</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
@@ -9622,6 +9528,12 @@ This section provides details for each class and property defined by FiCR: Fire 
     <dd>
      <a href="#FireExtinguisher" title="https://w3id.org/ficr#FireExtinguisher">FireExtinguisher</a> <sup class="type-c" title="class">c</sup>
     </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
    </dl>
   </div>
  </div>
@@ -9661,6 +9573,12 @@ This section provides details for each class and property defined by FiCR: Fire 
     </dt>
     <dd>
      <a href="#FireExtinguisher" title="https://w3id.org/ficr#FireExtinguisher">FireExtinguisher</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
@@ -9791,23 +9709,6 @@ This section provides details for each class and property defined by FiCR: Fire 
    </dl>
   </div>
  </div>
- <div class="entity" id="hasRequiredSeparationM">
-  <h3>hasRequiredSeparationM<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ficr#hasRequiredSeparationM</p>
-  <div class="comment">
-   <span class="markdown">Minimum separation distance in metres required to prevent fire spread, computed per NFPA 80A. Stored here as an externally-supplied value; FiCR does not compute this internally.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="hasScenarioDescription">
   <h3>hasScenarioDescription<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ficr#hasScenarioDescription</p>
@@ -9844,6 +9745,12 @@ This section provides details for each class and property defined by FiCR: Fire 
     </dt>
     <dd>
      <a href="#Equipment" title="https://w3id.org/ficr#Equipment">Equipment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
     </dd>
    </dl>
   </div>
@@ -10288,20 +10195,20 @@ This section provides details for each class and property defined by FiCR: Fire 
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
  <h3 id="namedindividuals" class="list">Named Individuals</h3>
  <ul class="hlist">
-  <li><a href="#ADB" title="https://w3id.org/ficr#ADB"> <span>A D B</span> </a></li>
   <li><a href="#AccessRoomRole" title="https://w3id.org/ficr#AccessRoomRole"> <span>AccessRoomRole</span> </a></li>
   <li><a href="#Accommodation" title="https://w3id.org/ficr#Accommodation"> <span>Accommodation</span> </a></li>
   <li><a href="#ActiveFireProtectionRole" title="https://w3id.org/ficr#ActiveFireProtectionRole"> <span>ActiveFireProtectionRole</span> </a></li>
+  <li><a href="#ADB" title="https://w3id.org/ficr#ADB">ADB</a></li>
   <li><a href="#AlternativeEscapeRouteRole" title="https://w3id.org/ficr#AlternativeEscapeRouteRole"> <span>AlternativeEscapeRouteRole</span> </a></li>
   <li><a href="#AlternativeExitRole" title="https://w3id.org/ficr#AlternativeExitRole"> <span>AlternativeExitRole</span> </a></li>
   <li><a href="#Applicable" title="https://w3id.org/ficr#Applicable"> <span>Applicable</span> </a></li>
   <li><a href="#AssemblyPlace" title="https://w3id.org/ficr#AssemblyPlace"> <span>AssemblyPlace</span> </a></li>
   <li><a href="#Auditorium" title="https://w3id.org/ficr#Auditorium"> <span>Auditorium</span> </a></li>
-  <li><a href="#BDM02" title="https://w3id.org/ficr#BDM02"> <span>B D M02</span> </a></li>
-  <li><a href="#BS_EN_12845" title="https://w3id.org/ficr#BS_EN_12845"> <span>B S E N 12845</span> </a></li>
   <li><a href="#Bathroom" title="https://w3id.org/ficr#Bathroom"> <span>Bathroom</span> </a></li>
+  <li><a href="#BDM02" title="https://w3id.org/ficr#BDM02">BDM02</a></li>
   <li><a href="#BoardingHouse" title="https://w3id.org/ficr#BoardingHouse"> <span>BoardingHouse</span> </a></li>
   <li><a href="#BoilerRoom" title="https://w3id.org/ficr#BoilerRoom"> <span>BoilerRoom</span> </a></li>
+  <li><a href="#BS_EN_12845" title="https://w3id.org/ficr#BS_EN_12845">BS_EN_12845</a></li>
   <li><a href="#CarParking" title="https://w3id.org/ficr#CarParking"> <span>CarParking</span> </a></li>
   <li><a href="#CavityBarrierPerformanceAspect" title="https://w3id.org/ficr#CavityBarrierPerformanceAspect"> <span>CavityBarrierPerformanceAspect</span> </a></li>
   <li><a href="#CirculationSpaceRole" title="https://w3id.org/ficr#CirculationSpaceRole"> <span>CirculationSpaceRole</span> </a></li>
@@ -10370,7 +10277,7 @@ This section provides details for each class and property defined by FiCR: Fire 
   <li><a href="#PurposeGroup7a" title="https://w3id.org/ficr#PurposeGroup7a"> <span>PurposeGroup7a</span> </a></li>
   <li><a href="#PurposeGroup7b" title="https://w3id.org/ficr#PurposeGroup7b"> <span>PurposeGroup7b</span> </a></li>
   <li><a href="#ResidentialCollege" title="https://w3id.org/ficr#ResidentialCollege"> <span>ResidentialCollege</span> </a></li>
-  <li><a href="#Risk_Evaluation_Tool" title="https://w3id.org/ficr#Risk_Evaluation_Tool"> <span>Risk Evaluation Tool</span> </a></li>
+  <li><a href="#Risk_Evaluation_Tool" title="https://w3id.org/ficr#Risk_Evaluation_Tool">Risk_Evaluation_Tool</a></li>
   <li><a href="#School" title="https://w3id.org/ficr#School"> <span>School</span> </a></li>
   <li><a href="#ServiceUsage" title="https://w3id.org/ficr#ServiceUsage"> <span>ServiceUsage</span> </a></li>
   <li><a href="#ShelteredHousing" title="https://w3id.org/ficr#ShelteredHousing"> <span>ShelteredHousing</span> </a></li>
@@ -10385,21 +10292,6 @@ This section provides details for each class and property defined by FiCR: Fire 
   <li><a href="#UnprotectedAreaRole" title="https://w3id.org/ficr#UnprotectedAreaRole"> <span>UnprotectedAreaRole</span> </a></li>
   <li><a href="#Warehouse" title="https://w3id.org/ficr#Warehouse"> <span>Warehouse</span> </a></li>
  </ul>
- <div class="entity" id="ADB">
-  <h3>A D B<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ficr#ADB</p>
-  <div class="comment">
-   <span class="markdown">Approved Document B Volume 1&amp;2 Building regulation in England covering fire safety matters within and around buildings.</span>
-  </div>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#GuidanceDocument" title="https://w3id.org/ficr#GuidanceDocument">GuidanceDocument</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="AccessRoomRole">
   <h3>AccessRoomRole<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ficr#AccessRoomRole</p>
@@ -10451,6 +10343,21 @@ This section provides details for each class and property defined by FiCR: Fire 
    </dt>
    <dd>
     <a href="#ActiveFireProtectionRole">class</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ADB">
+  <h3>ADB<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ficr#ADB</p>
+  <div class="comment">
+   <span class="markdown">Approved Document B Volume 1&amp;2 Building regulation in England covering fire safety matters within and around buildings.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#GuidanceDocument" title="https://w3id.org/ficr#GuidanceDocument">GuidanceDocument</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -10556,36 +10463,6 @@ This section provides details for each class and property defined by FiCR: Fire 
    </dd>
   </dl>
  </div>
- <div class="entity" id="BDM02">
-  <h3>B D M02<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ficr#BDM02</p>
-  <div class="comment">
-   <span class="markdown">Fire Protection of Buildings RISCAuthority BDM02 - Fire Protection of Buildings - 2022 v2 A4</span>
-  </div>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#GuidanceDocument" title="https://w3id.org/ficr#GuidanceDocument">GuidanceDocument</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="BS_EN_12845">
-  <h3>B S E N 12845<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ficr#BS_EN_12845</p>
-  <div class="comment">
-   <span class="markdown">Fixed firefighting systems. Automatic sprinkler systems. Design, installation and maintenance.</span>
-  </div>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#Standard" title="https://w3id.org/ficr#Standard">Standard</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="Bathroom">
   <h3>Bathroom<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ficr#Bathroom</p>
@@ -10607,6 +10484,21 @@ This section provides details for each class and property defined by FiCR: Fire 
    </dt>
    <dd>
     <a href="#Bathroom">class</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BDM02">
+  <h3>BDM02<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ficr#BDM02</p>
+  <div class="comment">
+   <span class="markdown">Fire Protection of Buildings RISCAuthority BDM02 - Fire Protection of Buildings - 2022 v2 A4</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#GuidanceDocument" title="https://w3id.org/ficr#GuidanceDocument">GuidanceDocument</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -10649,6 +10541,21 @@ This section provides details for each class and property defined by FiCR: Fire 
    </dt>
    <dd>
     <a href="#BoilerRoom">class</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BS_EN_12845">
+  <h3>BS_EN_12845<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ficr#BS_EN_12845</p>
+  <div class="comment">
+   <span class="markdown">Fixed firefighting systems. Automatic sprinkler systems. Design, installation and maintenance.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Standard" title="https://w3id.org/ficr#Standard">Standard</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -12057,7 +11964,7 @@ This section provides details for each class and property defined by FiCR: Fire 
   </dl>
  </div>
  <div class="entity" id="Risk_Evaluation_Tool">
-  <h3>Risk Evaluation Tool<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <h3>Risk_Evaluation_Tool<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ficr#Risk_Evaluation_Tool</p>
   <div class="comment">
    <span class="markdown">The Building Risk Evaluation Tool (BRET), is intended to provide an easy to follow insight into how the use, design, and construction material choices can influence the resilience of a building to the challenges presented by fire in terms of property protection, business resilience, and insurability. It may provide benefit to designers during the initial development stages looking to ensure the end result will meet the resilience expectations of the occupier and be insurable, and to insurers triaging new prospects.</span>
@@ -12350,6 +12257,441 @@ This section provides details for each class and property defined by FiCR: Fire 
 <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
 </div>
 </div>
+</div>
+
+
+<!--CHANGELOG SECTION-->
+   <div id="changelog"><div id="changelog">
+<h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Modified classes</u></summary>
+<ul><li><a href="#AlternativeEscapeRouteRole">https://w3id.org/ficr#AlternativeEscapeRouteRole</a>
+<ul>
+<li>Added: rdfs:comment "Escape routes that are sufficiently separated by direction and space or by fire resisting construction to ensure that one is still available if the other is affected by fire.
+A second stair, balcony or flat roof which enables a person to reach a place free from danger from fire is considered an alternative escape route for the purposes of a dwellinghouse."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Escape routes that are sufficiently separated by direction and space or by fire resisting construction to ensure that one is still available if the other is affected by fire.
+A second stair, balcony or flat roof which enables a person to reach a place free from danger from fire is considered an alternative escape route for the purposes of a dwellinghouse."@en</li>
+</ul>
+</li>
+<li><a href="#AtriumSpace">https://w3id.org/ficr#AtriumSpace</a>
+<ul>
+<li>Added: rdfs:comment "A continuous space that passes through one or more structural floors within a building, not necessarily vertically.
+Enclosed lift wells, enclosed escalator wells, building services ducts and stairs are not classified as atria."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A continuous space that passes through one or more structural floors within a building, not necessarily vertically.
+Enclosed lift wells, enclosed escalator wells, building services ducts and stairs are not classified as atria."@en</li>
+</ul>
+</li>
+<li><a href="#AutomaticReleaseMechanism">https://w3id.org/ficr#AutomaticReleaseMechanism</a>
+<ul>
+<li>Added: rdfs:comment "A device that normally holds a door open, but closes it automatically if any one of the following occurs.
+• Smoke is detected by an automatic device of a suitable nature and quality in a suitable location.
+• A hand-operated switch, fitted in a suitable position, is operated.
+• The electricity supply to the device, apparatus or switch fails.
+• The fire alarm system, if any, is operated."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A device that normally holds a door open, but closes it automatically if any one of the following occurs.
+• Smoke is detected by an automatic device of a suitable nature and quality in a suitable location.
+• A hand-operated switch, fitted in a suitable position, is operated.
+• The electricity supply to the device, apparatus or switch fails.
+• The fire alarm system, if any, is operated."@en</li>
+</ul>
+</li>
+<li><a href="#CavityBarrier">https://w3id.org/ficr#CavityBarrier</a>
+<ul>
+<li>Added: rdfs:comment "A construction within a cavity, other than a smoke curtain, to perform either of the
+following functions.
+• Close a cavity to stop smoke or flame entering.
+• Restrict the movement of smoke or flame within a cavity."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A construction within a cavity, other than a smoke curtain, to perform either of the
+following functions.
+• Close a cavity to stop smoke or flame entering.
+• Restrict the movement of smoke or flame within a cavity."@en</li>
+</ul>
+</li>
+<li><a href="#Ceiling">https://w3id.org/ficr#Ceiling</a>
+<ul>
+<li>Added: rdfs:comment "Part of a building that encloses a room, protected shaft or circulation space and is exposed overhead.
+The soffit of a rooflight, but not the frame, is included as part of the surface of the ceiling. An upstand below a rooflight is considered as a wall."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Part of a building that encloses a room, protected shaft or circulation space and is exposed overhead.
+The soffit of a rooflight, but not the frame, is included as part of the surface of the ceiling. An upstand below a rooflight is considered as a wall."@en</li>
+</ul>
+</li>
+<li><a href="#CompartmentWall">https://w3id.org/ficr#CompartmentWall</a>
+<ul>
+<li>Added: rdfs:comment "A fire resisting wall to separate one fire compartment from another.
+including a wall that is common to two or more buildings."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A fire resisting wall to separate one fire compartment from another.
+including a wall that is common to two or more buildings."@en</li>
+</ul>
+</li>
+<li><a href="#Corridor">https://w3id.org/ficr#Corridor</a>
+<ul>
+<li>Added: rdfs:comment "A corridor is a long, narrow passageway in a building that connects different rooms or areas.
+A design of a building containing flats, in which each flat is approached via a common horizontal internal access or circulation space, which may include a common entrance hall."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A corridor is a long, narrow passageway in a building that connects different rooms or areas.
+A design of a building containing flats, in which each flat is approached via a common horizontal internal access or circulation space, which may include a common entrance hall."@en</li>
+</ul>
+</li>
+<li><a href="#EntranceHall">https://w3id.org/ficr#EntranceHall</a>
+<ul>
+<li>Added: rdfs:comment "A hall or space inside a dwelling that connects
+the entrance door to the rooms."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A hall or space inside a dwelling that connects
+the entrance door to the rooms."@en</li>
+</ul>
+</li>
+<li><a href="#ExternalWall">https://w3id.org/ficr#ExternalWall</a>
+<ul>
+<li>Added: rdfs:comment "The external wall of a building includes all of the following.
+• Anything located within any space forming part of the wall.
+• Any decoration or other finish applied to any external (but not internal) surface forming part of the wall.
+• Any windows and doors in the wall.
+• Any part of a roof pitched at an angle of more than 70 degrees to the horizontal if that part of the roof adjoins a space within the building to which persons have access, but not access only for the purpose of carrying out repairs or maintenance."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "The external wall of a building includes all of the following.
+• Anything located within any space forming part of the wall.
+• Any decoration or other finish applied to any external (but not internal) surface forming part of the wall.
+• Any windows and doors in the wall.
+• Any part of a roof pitched at an angle of more than 70 degrees to the horizontal if that part of the roof adjoins a space within the building to which persons have access, but not access only for the purpose of carrying out repairs or maintenance."@en</li>
+</ul>
+</li>
+<li><a href="#FinalExitRole">https://w3id.org/ficr#FinalExitRole</a>
+<ul>
+<li>Added: rdfs:comment "The end of an escape route from a building that gives direct access to a street, passageway, walkway or open space, and is sited to ensure that people rapidly disperse away from the building so that they are no longer in danger from fire and/or smoke.
+Windows are not acceptable as final exits."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "The end of an escape route from a building that gives direct access to a street, passageway, walkway or open space, and is sited to ensure that people rapidly disperse away from the building so that they are no longer in danger from fire and/or smoke.
+Windows are not acceptable as final exits."@en</li>
+</ul>
+</li>
+<li><a href="#MultiStoreyBuilding">https://w3id.org/ficr#MultiStoreyBuilding</a>
+<ul>
+<li>Added: rdfs:comment "The building is regarded as a multi-storey building if both of the following apply.
+• There is more than one gallery.
+• The total aggregate area of all the galleries in one space is more than half the floor area of that space."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "The building is regarded as a multi-storey building if both of the following apply.
+• There is more than one gallery.
+• The total aggregate area of all the galleries in one space is more than half the floor area of that space."@en</li>
+</ul>
+</li>
+<li><a href="#Office">https://w3id.org/ficr#Office</a>
+<ul>
+<li>Added: rdfs:comment "Offices or premises used for any of the following and their control:
+• administration
+• clerical work (including writing, bookkeeping, sorting papers, filing, typing, duplicating, machine calculating, drawing and the editorial preparation of matter for publication, police and fire and rescue service work)
+• handling money (including banking and building society work)
+• communications (including postal, telegraph and radio communications)
+• radio, television, film, audio or video recording
+• performance (premises not open to the public)."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Offices or premises used for any of the following and their control:
+• administration
+• clerical work (including writing, bookkeeping, sorting papers, filing, typing, duplicating, machine calculating, drawing and the editorial preparation of matter for publication, police and fire and rescue service work)
+• handling money (including banking and building society work)
+• communications (including postal, telegraph and radio communications)
+• radio, television, film, audio or video recording
+• performance (premises not open to the public)."@en</li>
+</ul>
+</li>
+<li><a href="#PlaceOfSpecialHazard">https://w3id.org/ficr#PlaceOfSpecialHazard</a>
+<ul>
+<li>Added: rdfs:comment "A room such as any of the following.
+• Oil-filled transformer room.
+• Switch gear room.
+• Boiler room.
+• Storage space for fuel or other highly flammable substance(s).
+• Room that houses a fixed internal combustion engine."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A room such as any of the following.
+• Oil-filled transformer room.
+• Switch gear room.
+• Boiler room.
+• Storage space for fuel or other highly flammable substance(s).
+• Room that houses a fixed internal combustion engine."@en</li>
+</ul>
+</li>
+<li><a href="#PurposeGroup1">https://w3id.org/ficr#PurposeGroup1</a>
+<ul>
+<li>Added: rdfs:comment "A dwelling is a unit where one or more people live (whether or not as a sole or main residence) in either of the following situations.
+• A single person or people living together as a family.
+• A maximum of six people living together as a single household, including where care is provided for residents."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A dwelling is a unit where one or more people live (whether or not as a sole or main residence) in either of the following situations.
+• A single person or people living together as a family.
+• A maximum of six people living together as a single household, including where care is provided for residents."@en</li>
+</ul>
+</li>
+<li><a href="#PurposeGroup2a">https://w3id.org/ficr#PurposeGroup2a</a>
+<ul>
+<li>Added: rdfs:comment "Hospital, home, school or other similar establishment, where people sleep on the premises. The building may be either of the following:
+• Living accommodation for, or accommodation for the treatment, care or maintenance of, either:
+    - disabled people with a range of impairments including physical, sensory and
+cognitive impairments, or mental health conditions
+    - people under the age of 5 years.
+• A place of lawful detention."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Hospital, home, school or other similar establishment, where people sleep on the premises. The building may be either of the following:
+• Living accommodation for, or accommodation for the treatment, care or maintenance of, either:
+    - disabled people with a range of impairments including physical, sensory and
+cognitive impairments, or mental health conditions
+    - people under the age of 5 years.
+• A place of lawful detention."@en</li>
+</ul>
+</li>
+<li><a href="#PurposeGroup3">https://w3id.org/ficr#PurposeGroup3</a>
+<ul>
+<li>Added: rdfs:comment "Offices or premises used for any of the following and their control:
+• administration
+• clerical work (including writing, bookkeeping, sorting papers, filing, typing, duplicating, machine calculating, drawing and the editorial preparation of matter for publication, police and fire and rescue service work)
+• handling money (including banking and building society work)
+• communications (including postal, telegraph and radio communications)
+• radio, television, film, audio or video recording
+• performance (premises not open to the public)."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Offices or premises used for any of the following and their control:
+• administration
+• clerical work (including writing, bookkeeping, sorting papers, filing, typing, duplicating, machine calculating, drawing and the editorial preparation of matter for publication, police and fire and rescue service work)
+• handling money (including banking and building society work)
+• communications (including postal, telegraph and radio communications)
+• radio, television, film, audio or video recording
+• performance (premises not open to the public)."@en</li>
+</ul>
+</li>
+<li><a href="#PurposeGroup4">https://w3id.org/ficr#PurposeGroup4</a>
+<ul>
+<li>Added: rdfs:comment "Shops or premises used for either of the following.
+• A retail trade or business (including selling food or drink to the public for immediate consumption, retail by auction, self-selection and over-the-counter wholesale trading, the business of lending books or periodicals for gain, the business of a barber or hairdresser, and the rental of storage space to the public).
+• Premises to which the public are invited either:
+    – to deliver or collect goods in connection with their hire, repair or other treatment
+    – (except in the case of repair of motor vehicles) where the public themselves may carry out such repairs or other treatments."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Shops or premises used for either of the following.
+• A retail trade or business (including selling food or drink to the public for immediate consumption, retail by auction, self-selection and over-the-counter wholesale trading, the business of lending books or periodicals for gain, the business of a barber or hairdresser, and the rental of storage space to the public).
+• Premises to which the public are invited either:
+    – to deliver or collect goods in connection with their hire, repair or other treatment
+    – (except in the case of repair of motor vehicles) where the public themselves may carry out such repairs or other treatments."@en</li>
+</ul>
+</li>
+<li><a href="#PurposeGroup5">https://w3id.org/ficr#PurposeGroup5</a>
+<ul>
+<li>Added: rdfs:comment "Place of assembly, entertainment or recreation, including any of the following:
+• bingo halls, broadcasting, recording and film studios open to the public, casinos, dance halls
+• entertainment, conference, exhibition and leisure centres
+• funfairs and amusement arcades
+• museums and art galleries, non-residential clubs, theatres, cinemas, concert halls
+• educational establishments, dancing schools, gymnasia, swimming pool buildings, riding schools, skating rinks, sports pavilions, sports stadia
+• law courts
+• churches and other buildings of worship, crematoria
+• libraries open to the public, non-residential day centres, clinics, health centres and surgeries
+• passenger stations and termini for air, rail, road or sea travel
+• public toilets
+• zoos and menageries."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Place of assembly, entertainment or recreation, including any of the following:
+• bingo halls, broadcasting, recording and film studios open to the public, casinos, dance halls
+• entertainment, conference, exhibition and leisure centres
+• funfairs and amusement arcades
+• museums and art galleries, non-residential clubs, theatres, cinemas, concert halls
+• educational establishments, dancing schools, gymnasia, swimming pool buildings, riding schools, skating rinks, sports pavilions, sports stadia
+• law courts
+• churches and other buildings of worship, crematoria
+• libraries open to the public, non-residential day centres, clinics, health centres and surgeries
+• passenger stations and termini for air, rail, road or sea travel
+• public toilets
+• zoos and menageries."@en</li>
+</ul>
+</li>
+<li><a href="#PurposeGroup6">https://w3id.org/ficr#PurposeGroup6</a>
+<ul>
+<li>Added: rdfs:comment "Factories and other premises used for any of the following:
+• manufacturing, altering, repairing, cleaning, washing, breaking up, adapting or processing any article
+• generating power
+• slaughtering livestock."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Factories and other premises used for any of the following:
+• manufacturing, altering, repairing, cleaning, washing, breaking up, adapting or processing any article
+• generating power
+• slaughtering livestock."@en</li>
+</ul>
+</li>
+<li><a href="#PurposeGroup7a">https://w3id.org/ficr#PurposeGroup7a</a>
+<ul>
+<li>Added: rdfs:comment "Either of the following:
+• place (other than described under 7(b)) for the storage or deposit of goods or materials
+• any building not within purpose groups 1 to 6."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Either of the following:
+• place (other than described under 7(b)) for the storage or deposit of goods or materials
+• any building not within purpose groups 1 to 6."@en</li>
+</ul>
+</li>
+<li><a href="#SelfClosingDevice">https://w3id.org/ficr#SelfClosingDevice</a>
+<ul>
+<li>Added: rdfs:comment "A device that closes a door, when open at any angle, against a door frame.
+NOTE: If the door is in a cavity barrier, rising butt hinges (which are different from the self-closing device mentioned above) are acceptable."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A device that closes a door, when open at any angle, against a door frame.
+NOTE: If the door is in a cavity barrier, rising butt hinges (which are different from the self-closing device mentioned above) are acceptable."@en</li>
+</ul>
+</li>
+<li><a href="#Shop">https://w3id.org/ficr#Shop</a>
+<ul>
+<li>Added: rdfs:comment "Shops or premises used for either of the following.
+• A retail trade or business (including selling food or drink to the public for immediate consumption, retail by auction, self-selection and over the-counter wholesale trading, the business of lending books or periodicals for gain, the business of a barber or hairdresser, and the rental of storage space to the public).
+• Premises to which the public are invited either:
+– to deliver or collect goods in connection with their hire, repair or other treatment
+– (except in the case of repair of motor vehicles) where the public themselves may carry out such repairs or other treatments."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Shops or premises used for either of the following.
+• A retail trade or business (including selling food or drink to the public for immediate consumption, retail by auction, self-selection and over the-counter wholesale trading, the business of lending books or periodicals for gain, the business of a barber or hairdresser, and the rental of storage space to the public).
+• Premises to which the public are invited either:
+– to deliver or collect goods in connection with their hire, repair or other treatment
+– (except in the case of repair of motor vehicles) where the public themselves may carry out such repairs or other treatments."@en</li>
+</ul>
+</li>
+<li><a href="#SpecifiedAttachment">https://w3id.org/ficr#SpecifiedAttachment</a>
+<ul>
+<li>Added: rdfs:comment "Includes any of the following.
+• A balcony attached to an external wall.
+• A device for reducing heat gain within a building by deflecting sunlight which is attached to an external wall."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Includes any of the following.
+• A balcony attached to an external wall.
+• A device for reducing heat gain within a building by deflecting sunlight which is attached to an external wall."@en</li>
+</ul>
+</li>
+<li><a href="#StoreyExitRole">https://w3id.org/ficr#StoreyExitRole</a>
+<ul>
+<li>Added: rdfs:comment "A final exit, or a doorway that gives direct access into a protected stairway, firefighting lobby or external escape route.
+NOTE: If an institutional building is planned to enable progressive horizontal evacuation, a door in a compartment wall is considered a storey exit for the purposes of requirement B1."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A final exit, or a doorway that gives direct access into a protected stairway, firefighting lobby or external escape route.
+NOTE: If an institutional building is planned to enable progressive horizontal evacuation, a door in a compartment wall is considered a storey exit for the purposes of requirement B1."@en</li>
+</ul>
+</li>
+<li><a href="#UnprotectedAreaRole">https://w3id.org/ficr#UnprotectedAreaRole</a>
+<ul>
+<li>Added: rdfs:comment "Unprotected area (in relation to a side or external wall of a building) All of the following are classed as unprotected areas.
+• Any part of the external wall that has less than the relevant fire resistance set out in Section 11.
+• Any part of the external wall constructed of material more than 1mm thick if that material does not have a class B-s3, d2 rating or better, which is attached or applied, whether for cladding or any other purpose.
+• Windows, doors or other openings. This does not include windows that are designed and glazed to give the necessary level of fire resistance and that are not openable.
+NOTE: Recessed car parking areas as shown in
+Diagram A1 should not be regarded as unprotected
+areas."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Unprotected area (in relation to a side or external wall of a building) All of the following are classed as unprotected areas.
+• Any part of the external wall that has less than the relevant fire resistance set out in Section 11.
+• Any part of the external wall constructed of material more than 1mm thick if that material does not have a class B-s3, d2 rating or better, which is attached or applied, whether for cladding or any other purpose.
+• Windows, doors or other openings. This does not include windows that are designed and glazed to give the necessary level of fire resistance and that are not openable.
+NOTE: Recessed car parking areas as shown in
+Diagram A1 should not be regarded as unprotected
+areas."@en</li>
+</ul>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Modified object properties</u></summary>
+<ul><li><a href="#isFireSafetyRoleOf">https://w3id.org/ficr#isFireSafetyRoleOf</a>
+<ul>
+<li>Deleted: Range https://w3id.org/ficr#FireSafetyRole</li>
+</ul>
+</li>
+<li><a href="#isPhysicalObjectFireSafetyRoleOf">https://w3id.org/ficr#isPhysicalObjectFireSafetyRoleOf</a>
+<ul>
+<li>Added: SubProperty of https://w3id.org/ficr#isFireSafetyRoleOf</li>
+</ul>
+<ul>
+<li>Deleted: SubProperty of https://w3id.org/ficr#isUsageTypeOf</li>
+</ul>
+</li>
+<li><a href="#isSystemFireSafetyRoleOf">https://w3id.org/ficr#isSystemFireSafetyRoleOf</a>
+<ul>
+<li>Added: SubProperty of https://w3id.org/ficr#isFireSafetyRoleOf</li>
+</ul>
+<ul>
+<li>Deleted: SubProperty of https://w3id.org/ficr#isUsageTypeOf</li>
+</ul>
+</li>
+<li><a href="#isZoneFireSafetyRoleOf">https://w3id.org/ficr#isZoneFireSafetyRoleOf</a>
+<ul>
+<li>Added: SubProperty of https://w3id.org/ficr#isFireSafetyRoleOf</li>
+</ul>
+<ul>
+<li>Deleted: SubProperty of https://w3id.org/ficr#isUsageTypeOf</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted object properties</u></summary>
+<ul><li><a href="#hasFireRiskUnitRole">https://w3id.org/ficr#hasFireRiskUnitRole</a>
+</li>
+<li><a href="#hasSeparationRecord">https://w3id.org/ficr#hasSeparationRecord</a>
+</li>
+<li><a href="#isFireRiskUnitRoleOf">https://w3id.org/ficr#isFireRiskUnitRoleOf</a>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Modified data properties</u></summary>
+<ul><li><a href="#hasCoverageType">https://w3id.org/ficr#hasCoverageType</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#hasDetectionType">https://w3id.org/ficr#hasDetectionType</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#hasExtinguisherAgent">https://w3id.org/ficr#hasExtinguisherAgent</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#hasFireClassRating">https://w3id.org/ficr#hasFireClassRating</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#hasServiceExpiryDate">https://w3id.org/ficr#hasServiceExpiryDate</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#date</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted data properties</u></summary>
+<ul><li><a href="#hasActualSeparationM">https://w3id.org/ficr#hasActualSeparationM</a>
+</li>
+<li><a href="#hasRequiredSeparationM">https://w3id.org/ficr#hasRequiredSeparationM</a>
+</li>
+</ul></details></div>
 </div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

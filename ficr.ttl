@@ -15,7 +15,7 @@
 @base <https://w3id.org/ficr#> .
 
 <https://w3id.org/ficr> rdf:type owl:Ontology ;
-                         owl:versionIRI <https://w3id.org/ficr/1.1.0> ;
+                         owl:versionIRI <https://w3id.org/ficr/1.1.1> ;
                          owl:imports <https://w3id.org/bot> ;
                          dcterms:creator "Yu Zhang" ,
                                          "Dayou Chen" ,
@@ -26,13 +26,14 @@
                          dcterms:description "FiCR, Fire Compliance and Risk Analysis, is a domain specific semantic model designed to represent fire safety and fire risk relevant physical objects, building elements, equipment, functional roles, and their relationships in existing buildings. It supports a structured and interoperable representation of both passive and active fire protection measures, as well as risk related attributes and performance outcomes, enabling compliance assessment, fire risk analysis, and inspection activities throughout the building operation and maintenance phase. FiCR further provides a semantic foundation for rule based reasoning and fire oriented digital twins that integrate regulatory compliance and risk informed decision making."@en ;
                          dcterms:issued "2025-06-26"^^xsd:date ;
                          dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                         dcterms:modified "2025-07-01" ;
+                         dcterms:modified "2025-07-10"^^xsd:date ;
                          dcterms:title "FiCR: Fire Compliance and Risk Analysis Ontology"@en ;
                          vann:preferredNamespacePrefix "ficr" ;
                          vann:preferredNamespaceUri "https://w3id.org/ficr#" ;
                          rdfs:comment "FiCR, Fire Compliance and Risk Analysis Ontology"@en ,
                                       "Property domain convention: properties shared by multiple record types (e.g. supportedByEvidence, hasEvidenceStatus, measurement properties such as hasActualREI) are deliberately declared without rdfs:domain to avoid unintended type inference. Properties with a single host class declare an explicit rdfs:domain. Intended subjects are documented in each property's rdfs:comment."@en ;
-                         owl:versionInfo "1.1.0" .
+                         owl:priorVersion <https://w3id.org/ficr/1.1.0> ;
+                         owl:versionInfo "1.1.1" .
 
 #################################################################
 #    Annotation properties
@@ -315,14 +316,6 @@ ficr:hasEvidenceStatus rdf:type owl:ObjectProperty ;
                        rdfs:label "hasEvidenceStatus"@en .
 
 
-###  https://w3id.org/ficr#hasFireRiskUnitRole
-ficr:hasFireRiskUnitRole rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf ficr:hasUsageType ;
-                         owl:inverseOf ficr:isFireRiskUnitRoleOf ;
-                         rdfs:comment "Assigns a fire risk unit role to an entity."@en ;
-                         rdfs:label "hasFireRiskUnitRole"@en .
-
-
 ###  https://w3id.org/ficr#hasFireSafetyRole
 ficr:hasFireSafetyRole rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf ficr:hasUsageType ;
@@ -388,14 +381,6 @@ ficr:hasScenarioRiskUnit rdf:type owl:ObjectProperty ;
                          rdfs:range ficr:RiskUnit ;
                          rdfs:comment "Links a fire risk scenario to the risk unit whose fire risk is being interpreted."@en ;
                          rdfs:label "hasScenarioRiskUnit"@en .
-
-
-###  https://w3id.org/ficr#hasSeparationRecord
-ficr:hasSeparationRecord rdf:type owl:ObjectProperty ;
-                         rdfs:domain ficr:RiskUnit ;
-                         rdfs:comment "Links a risk unit to a separation distance record describing its exposure to an adjacent risk unit."@en ;
-                         rdfs:label "hasSeparationRecord"@en ;
-                         skos:scopeNote "Informational: for future use."@en .
 
 
 ###  https://w3id.org/ficr#hasSpaceUsage
@@ -466,17 +451,9 @@ ficr:isExposedTo rdf:type owl:ObjectProperty ;
                  rdfs:label "isExposedTo"@en .
 
 
-###  https://w3id.org/ficr#isFireRiskUnitRoleOf
-ficr:isFireRiskUnitRoleOf rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf ficr:isUsageTypeOf ;
-                          rdfs:comment "Inverse of hasFireRiskUnitRole."@en ;
-                          rdfs:label "isFireRiskUnitRoleOf"@en .
-
-
 ###  https://w3id.org/ficr#isFireSafetyRoleOf
 ficr:isFireSafetyRoleOf rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf ficr:isUsageTypeOf ;
-                        rdfs:range ficr:FireSafetyRole ;
                         rdfs:comment "Inverse of hasFireSafetyRole."@en ;
                         rdfs:label "isFireSafetyRoleOf"@en .
 
@@ -491,7 +468,7 @@ ficr:isLocatedIn rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/ficr#isPhysicalObjectFireSafetyRoleOf
 ficr:isPhysicalObjectFireSafetyRoleOf rdf:type owl:ObjectProperty ;
-                                      rdfs:subPropertyOf ficr:isUsageTypeOf ;
+                                      rdfs:subPropertyOf ficr:isFireSafetyRoleOf ;
                                       rdfs:comment "Inverse of hasPhysicalObjectFireSafetyRole"@en ;
                                       rdfs:label "isPhysicalObjectFireSafetyRoleOf"@en .
 
@@ -536,7 +513,7 @@ ficr:isSystemContainedIn rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/ficr#isSystemFireSafetyRoleOf
 ficr:isSystemFireSafetyRoleOf rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf ficr:isUsageTypeOf ;
+                              rdfs:subPropertyOf ficr:isFireSafetyRoleOf ;
                               rdfs:comment "Inverse of hasFireSafetyRole, linking a fire safety role to the system or element that bears it."@en ;
                               rdfs:label "isSystemFireSafetyRoleOf"@en .
 
@@ -556,7 +533,7 @@ ficr:isUtilizationPurposeOf rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/ficr#isZoneFireSafetyRoleOf
 ficr:isZoneFireSafetyRoleOf rdf:type owl:ObjectProperty ;
-                            rdfs:subPropertyOf ficr:isUsageTypeOf ;
+                            rdfs:subPropertyOf ficr:isFireSafetyRoleOf ;
                             rdfs:comment "Inverse of hasZoneFireSafetyRole."@en ;
                             rdfs:label "isZoneFireSafetyRoleOf"@en .
 
@@ -661,14 +638,6 @@ ficr:hasActualREI rdf:type owl:DatatypeProperty ;
                   rdfs:label "hasActualREI"@en .
 
 
-###  https://w3id.org/ficr#hasActualSeparationM
-ficr:hasActualSeparationM rdf:type owl:DatatypeProperty ;
-                          rdfs:range xsd:decimal ;
-                          rdfs:comment "Measured physical separation distance in metres between two risk units."@en ;
-                          rdfs:label "hasActualSeparationM"@en ;
-                          skos:scopeNote "Informational: for future use."@en .
-
-
 ###  https://w3id.org/ficr#hasArea
 ficr:hasArea rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:decimal ;
@@ -703,6 +672,7 @@ ficr:hasCombinedGrossFloorArea rdf:type owl:DatatypeProperty ;
 ###  https://w3id.org/ficr#hasCoverageType
 ficr:hasCoverageType rdf:type owl:DatatypeProperty ;
                      rdfs:domain ficr:Alarm ;
+                     rdfs:range xsd:string ;
                      rdfs:comment "The spatial coverage mode of the detector, e.g. PointDetector, BeamDetector, AspiratingDetector."@en ;
                      rdfs:label "hasCoverageType"@en .
 
@@ -710,6 +680,7 @@ ficr:hasCoverageType rdf:type owl:DatatypeProperty ;
 ###  https://w3id.org/ficr#hasDetectionType
 ficr:hasDetectionType rdf:type owl:DatatypeProperty ;
                       rdfs:domain ficr:Alarm ;
+                      rdfs:range xsd:string ;
                       rdfs:comment "The detection principle of the alarm device, e.g. OpticalSmoke, Ionisation, Heat, MultiSensor, CarbonMonoxide."@en ;
                       rdfs:label "hasDetectionType"@en .
 
@@ -731,6 +702,7 @@ ficr:hasElevation rdf:type owl:DatatypeProperty ;
 ###  https://w3id.org/ficr#hasExtinguisherAgent
 ficr:hasExtinguisherAgent rdf:type owl:DatatypeProperty ;
                           rdfs:domain ficr:FireExtinguisher ;
+                          rdfs:range xsd:string ;
                           rdfs:comment "The extinguishing agent type, e.g. DryPowder, CO2, WaterMist, WetChemical, Foam."@en ;
                           rdfs:label "hasExtinguisherAgent"@en .
 
@@ -746,6 +718,7 @@ ficr:hasFindingStatement rdf:type owl:DatatypeProperty ;
 ###  https://w3id.org/ficr#hasFireClassRating
 ficr:hasFireClassRating rdf:type owl:DatatypeProperty ;
                         rdfs:domain ficr:FireExtinguisher ;
+                        rdfs:range xsd:string ;
                         rdfs:comment "The fire class rating per BS EN 2, e.g. A, B, AB, ABC, AF."@en ;
                         rdfs:label "hasFireClassRating"@en .
 
@@ -796,14 +769,6 @@ ficr:hasRequiredREI rdf:type owl:DatatypeProperty ;
                     rdfs:label "hasRequiredREI"@en .
 
 
-###  https://w3id.org/ficr#hasRequiredSeparationM
-ficr:hasRequiredSeparationM rdf:type owl:DatatypeProperty ;
-                            rdfs:range xsd:decimal ;
-                            rdfs:comment "Minimum separation distance in metres required to prevent fire spread, computed per NFPA 80A. Stored here as an externally-supplied value; FiCR does not compute this internally."@en ;
-                            rdfs:label "hasRequiredSeparationM"@en ;
-                            skos:scopeNote "Informational: for future use."@en .
-
-
 ###  https://w3id.org/ficr#hasScenarioDescription
 ficr:hasScenarioDescription rdf:type owl:DatatypeProperty ;
                             rdfs:domain ficr:FireRiskScenario ;
@@ -815,6 +780,7 @@ ficr:hasScenarioDescription rdf:type owl:DatatypeProperty ;
 ###  https://w3id.org/ficr#hasServiceExpiryDate
 ficr:hasServiceExpiryDate rdf:type owl:DatatypeProperty ;
                           rdfs:domain ficr:Equipment ;
+                          rdfs:range xsd:date ;
                           rdfs:comment "The date by which the equipment must be serviced or replaced to remain compliant."@en ;
                           rdfs:label "hasServiceExpiryDate"@en .
 
@@ -2835,7 +2801,8 @@ ficr:Window rdf:type owl:Class ;
 ficr:ADB rdf:type owl:NamedIndividual ,
                   ficr:GuidanceDocument ;
          rdfs:comment """Approved Document B Volume 1&2
-Building regulation in England covering fire safety matters within and around buildings."""@en .
+Building regulation in England covering fire safety matters within and around buildings."""@en ;
+         rdfs:label "ADB"@en .
 
 
 ###  https://w3id.org/ficr#AccessRoomRole
@@ -2882,13 +2849,15 @@ ficr:Auditorium rdf:type owl:NamedIndividual ,
 ficr:BDM02 rdf:type owl:NamedIndividual ,
                     ficr:GuidanceDocument ;
            rdfs:comment """Fire Protection of Buildings
-RISCAuthority BDM02 - Fire Protection of Buildings - 2022 v2 A4"""@en .
+RISCAuthority BDM02 - Fire Protection of Buildings - 2022 v2 A4"""@en ;
+           rdfs:label "BDM02"@en .
 
 
 ###  https://w3id.org/ficr#BS_EN_12845
 ficr:BS_EN_12845 rdf:type owl:NamedIndividual ,
                           ficr:Standard ;
-                 rdfs:comment "Fixed firefighting systems. Automatic sprinkler systems. Design, installation and maintenance."@en .
+                 rdfs:comment "Fixed firefighting systems. Automatic sprinkler systems. Design, installation and maintenance."@en ;
+                 rdfs:label "BS_EN_12845"@en .
 
 
 ###  https://w3id.org/ficr#Bathroom
@@ -3249,7 +3218,8 @@ ficr:ResidentialCollege rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ficr#Risk_Evaluation_Tool
 ficr:Risk_Evaluation_Tool rdf:type owl:NamedIndividual ,
                                    ficr:GuidanceDocument ;
-                          rdfs:comment "The Building Risk Evaluation Tool (BRET), is intended to provide an easy to follow insight into how the use, design, and construction material choices can influence the resilience of a building to the challenges presented by fire in terms of property protection, business resilience, and insurability. It may provide benefit to designers during the initial development stages looking to ensure the end result will meet the resilience expectations of the occupier and be insurable, and to insurers triaging new prospects."@en .
+                          rdfs:comment "The Building Risk Evaluation Tool (BRET), is intended to provide an easy to follow insight into how the use, design, and construction material choices can influence the resilience of a building to the challenges presented by fire in terms of property protection, business resilience, and insurability. It may provide benefit to designers during the initial development stages looking to ensure the end result will meet the resilience expectations of the occupier and be insurable, and to insurers triaging new prospects."@en ;
+                          rdfs:label "Risk_Evaluation_Tool"@en .
 
 
 ###  https://w3id.org/ficr#School

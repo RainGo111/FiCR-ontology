@@ -4,8 +4,8 @@ FiCR (Fire Compliance and Risk Analysis) is a domain-specific ontology for repre
 
 - Namespace: `https://w3id.org/ficr#`
 - Ontology IRI: `https://w3id.org/ficr`
-- Current version: `1.1.0`
-- Version IRI: `https://w3id.org/ficr/1.1.0`
+- Current version: `1.1.1`
+- Version IRI: `https://w3id.org/ficr/1.1.1`
 - Authors: Yu Zhang, Dayou Chen, Long Chen, Qiuchen Lu, Simon Sølvsten, Craig Hancock
 - License: CC BY 4.0
 - Documentation: <https://raingo111.github.io/FiCR-ontology/>
@@ -16,6 +16,7 @@ FiCR (Fire Compliance and Risk Analysis) is a domain-specific ontology for repre
 - `docs/`: WIDOCO documentation for GitHub Pages.
 - `docs/1.0.0/`: frozen WIDOCO documentation snapshot for version `1.0.0`.
 - `docs/1.1.0/`: frozen WIDOCO documentation snapshot for version `1.1.0`.
+- `docs/1.1.1/`: frozen WIDOCO documentation snapshot for version `1.1.1`.
 
 ## Regenerating Documentation
 
