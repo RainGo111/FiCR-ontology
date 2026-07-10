@@ -14,9 +14,9 @@ FiCR (Fire Compliance and Risk Analysis) is a domain-specific ontology for repre
 
 - `ficr.ttl`: latest ontology source in Turtle.
 - `docs/`: WIDOCO documentation for GitHub Pages.
-- `docs/1.0.0/`: frozen WIDOCO documentation snapshot for version `1.0.0`.
-- `docs/1.1.0/`: frozen WIDOCO documentation snapshot for version `1.1.0`.
-- `docs/1.1.1/`: frozen WIDOCO documentation snapshot for version `1.1.1`.
+- `docs/1.0.0/`: frozen Turtle ontology snapshot for version `1.0.0`.
+- `docs/1.1.0/`: frozen Turtle ontology snapshot for version `1.1.0`.
+- `docs/1.1.1/`: frozen Turtle ontology snapshot for version `1.1.1`.
 
 ## Regenerating Documentation
 
