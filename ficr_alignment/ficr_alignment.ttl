@@ -1,0 +1,7 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://w3id.org/ficr/alignment> a owl:Ontology ;
+    owl:imports <ficr-align-saref4bldg.ttl>,
+        <ficr-align-brick.ttl>,
+        <ficr-align-rec.ttl>,
+        <ficr-align-sosa.ttl> .

@@ -1,0 +1,30 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ficr: <https://w3id.org/ficr#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rec: <https://w3id.org/rec#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ficr/alignment/rec> a owl:Ontology ;
+    owl:versionIRI <https://w3id.org/ficr/alignment/1.0.0/rec> ;
+    owl:versionInfo "1.0.0" ;
+    dcterms:title "FiCR v1.1.1 alignment to RealEstateCore v4.1.0"@en ;
+    dcterms:creator "Yu Zhang" ;
+    dcterms:contributor "Dayou Chen", "Long Chen", "Qiuchen Lu",
+        "Simon Sølvsten", "Craig Hancock" ;
+    dcterms:issued "2026-07-14"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:conformsTo <https://w3id.org/ficr/1.1.1>,
+        <https://github.com/RealEstateCore/rec/releases/tag/v4.1.0> .
+
+ficr:RoomSpace skos:closeMatch rec:Room .
+ficr:GroundAndAboveStorey skos:broadMatch rec:Level .
+ficr:BasementStorey skos:broadMatch rec:Level .
+ficr:Sensor skos:closeMatch rec:SensorEquipment .
+ficr:DocumentEvidence skos:broadMatch rec:Document .
+
+[] a owl:Axiom ; owl:annotatedSource ficr:RoomSpace ; owl:annotatedProperty skos:closeMatch ; owl:annotatedTarget rec:Room ; dcterms:description "Both identify room-scale architectural spaces within a building."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:GroundAndAboveStorey ; owl:annotatedProperty skos:broadMatch ; owl:annotatedTarget rec:Level ; dcterms:description "A ground or above-ground FiCR storey is one kind of the generic building level represented by REC."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:BasementStorey ; owl:annotatedProperty skos:broadMatch ; owl:annotatedTarget rec:Level ; dcterms:description "A FiCR basement storey is one kind of the generic building level represented by REC."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:Sensor ; owl:annotatedProperty skos:closeMatch ; owl:annotatedTarget rec:SensorEquipment ; dcterms:description "Both describe physical sensor equipment deployed as part of building ICT or control infrastructure."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:DocumentEvidence ; owl:annotatedProperty skos:broadMatch ; owl:annotatedTarget rec:Document ; dcterms:description "FiCR document evidence is a document used to support an assessment, while REC represents documents generally."@en .

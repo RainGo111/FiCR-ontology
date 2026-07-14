@@ -1,0 +1,32 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ficr: <https://w3id.org/ficr#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ficr/alignment/saref4bldg> a owl:Ontology ;
+    owl:versionIRI <https://w3id.org/ficr/alignment/1.0.0/saref4bldg> ;
+    owl:versionInfo "1.0.0" ;
+    dcterms:title "FiCR v1.1.1 alignment to SAREF4BLDG v2.1.1"@en ;
+    dcterms:creator "Yu Zhang" ;
+    dcterms:contributor "Dayou Chen", "Long Chen", "Qiuchen Lu",
+        "Simon Sølvsten", "Craig Hancock" ;
+    dcterms:issued "2026-07-14"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:conformsTo <https://w3id.org/ficr/1.1.1>,
+        <https://saref.etsi.org/saref4bldg/v2.1.1/> .
+
+ficr:RoomSpace skos:broadMatch s4bldg:BuildingSpace .
+ficr:Equipment skos:closeMatch s4bldg:BuildingDevice .
+ficr:Alarm skos:broadMatch s4bldg:Alarm .
+ficr:Sensor skos:closeMatch s4bldg:Sensor .
+ficr:Controller skos:broadMatch s4bldg:Controller .
+ficr:FireAndSmokeDamper skos:broadMatch s4bldg:Damper .
+
+[] a owl:Axiom ; owl:annotatedSource ficr:RoomSpace ; owl:annotatedProperty skos:broadMatch ; owl:annotatedTarget s4bldg:BuildingSpace ; dcterms:description "A FiCR room is an enclosed non-circulation building space, while SAREF4BLDG covers building spaces generally."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:Equipment ; owl:annotatedProperty skos:closeMatch ; owl:annotatedTarget s4bldg:BuildingDevice ; dcterms:description "Both describe identifiable physical devices or apparatus used to perform tasks in a building."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:Alarm ; owl:annotatedProperty skos:broadMatch ; owl:annotatedTarget s4bldg:Alarm ; dcterms:description "FiCR models an equipment-level fire alarm, while SAREF4BLDG models alarms for any abnormal condition."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:Sensor ; owl:annotatedProperty skos:closeMatch ; owl:annotatedTarget s4bldg:Sensor ; dcterms:description "Both describe a physical building sensor that detects or measures environmental conditions and produces a signal."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:Controller ; owl:annotatedProperty skos:broadMatch ; owl:annotatedTarget s4bldg:Controller ; dcterms:description "Both represent building automation controllers, but SAREF4BLDG also permits virtual controllers."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:FireAndSmokeDamper ; owl:annotatedProperty skos:broadMatch ; owl:annotatedTarget s4bldg:Damper ; dcterms:description "A FiCR fire-and-smoke damper is a fire-specific subtype of the generic airflow damper described by SAREF4BLDG."@en .

@@ -1,0 +1,30 @@
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ficr: <https://w3id.org/ficr#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ficr/alignment/brick> a owl:Ontology ;
+    owl:versionIRI <https://w3id.org/ficr/alignment/1.0.0/brick> ;
+    owl:versionInfo "1.0.0" ;
+    dcterms:title "FiCR v1.1.1 alignment to Brick v1.4.4"@en ;
+    dcterms:creator "Yu Zhang" ;
+    dcterms:contributor "Dayou Chen", "Long Chen", "Qiuchen Lu",
+        "Simon Sølvsten", "Craig Hancock" ;
+    dcterms:issued "2026-07-14"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:conformsTo <https://w3id.org/ficr/1.1.1>,
+        <https://github.com/BrickSchema/Brick/releases/tag/v1.4.4> .
+
+ficr:RoomSpace skos:closeMatch brick:Room .
+ficr:FireCompartment skos:closeMatch brick:Fire_Zone .
+ficr:FireProtectionEquipment skos:closeMatch brick:Fire_Safety_Equipment .
+ficr:FireProtectionSystem skos:narrowMatch brick:Fire_Safety_System .
+ficr:Alarm skos:closeMatch brick:Fire_Alarm .
+
+[] a owl:Axiom ; owl:annotatedSource ficr:RoomSpace ; owl:annotatedProperty skos:closeMatch ; owl:annotatedTarget brick:Room ; dcterms:description "Both represent room-like bounded building spaces, but their extensions overlap without either containing the other."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:FireCompartment ; owl:annotatedProperty skos:closeMatch ; owl:annotatedTarget brick:Fire_Zone ; dcterms:description "Both partition a building for fire management, but FiCR uses physical boundaries and Brick uses a logical monitored zone."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:FireProtectionEquipment ; owl:annotatedProperty skos:closeMatch ; owl:annotatedTarget brick:Fire_Safety_Equipment ; dcterms:description "Both collect equipment used for fire detection, warning, suppression, control, or related protection."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:FireProtectionSystem ; owl:annotatedProperty skos:narrowMatch ; owl:annotatedTarget brick:Fire_Safety_System ; dcterms:description "Brick covers monitoring, detection, and suppression, while FiCR also includes wider fire-support systems."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:Alarm ; owl:annotatedProperty skos:closeMatch ; owl:annotatedTarget brick:Fire_Alarm ; dcterms:description "Both denote equipment-level fire alarm items rather than a complete fire alarm system."@en .

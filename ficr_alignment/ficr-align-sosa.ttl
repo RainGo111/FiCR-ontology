@@ -1,0 +1,26 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ficr: <https://w3id.org/ficr#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ficr/alignment/sosa> a owl:Ontology ;
+    owl:versionIRI <https://w3id.org/ficr/alignment/1.0.0/sosa> ;
+    owl:versionInfo "1.0.0" ;
+    dcterms:title "FiCR v1.1.1 alignment to the 2017 SOSA/SSN Recommendation"@en ;
+    dcterms:creator "Yu Zhang" ;
+    dcterms:contributor "Dayou Chen", "Long Chen", "Qiuchen Lu",
+        "Simon Sølvsten", "Craig Hancock" ;
+    dcterms:issued "2026-07-14"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:conformsTo <https://w3id.org/ficr/1.1.1>,
+        <https://www.w3.org/TR/2017/REC-vocab-ssn-20171019/> .
+
+ficr:Sensor skos:broadMatch sosa:Sensor .
+ficr:ObservedEvidence skos:broadMatch sosa:Result .
+ficr:SensorEvidence skos:broadMatch sosa:Result .
+
+[] a owl:Axiom ; owl:annotatedSource ficr:Sensor ; owl:annotatedProperty skos:broadMatch ; owl:annotatedTarget sosa:Sensor ; dcterms:description "A FiCR building sensor is a physical-device case of SOSA Sensor, which also permits human agents and software."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:ObservedEvidence ; owl:annotatedProperty skos:broadMatch ; owl:annotatedTarget sosa:Result ; dcterms:description "FiCR observed evidence is an assessment-oriented subset of the generic procedure results represented by SOSA."@en .
+[] a owl:Axiom ; owl:annotatedSource ficr:SensorEvidence ; owl:annotatedProperty skos:broadMatch ; owl:annotatedTarget sosa:Result ; dcterms:description "FiCR sensor evidence is a sensor-generated assessment artifact within the broader class of SOSA procedure results."@en .
