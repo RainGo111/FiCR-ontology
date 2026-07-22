@@ -1,6 +1,6 @@
 # FiCR Ontology
 
-FiCR (Fire Compliance and Risk Analysis) is a domain-specific ontology for representing fire safety, fire compliance, and fire risk information in existing buildings.
+FiCR (Fire Compliance Checking and Risk Analysis) is a domain-specific ontology for representing fire safety, fire compliance, and fire risk information in existing buildings.
 
 - Namespace: `https://w3id.org/ficr#`
 - Ontology IRI: `https://w3id.org/ficr`
